@@ -1,0 +1,97 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "hero"
+    label: "Главный экран"
+    files:
+      - name: "hero"
+        label: "Главный экран"
+        file: "content/hero.json"
+        fields:
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Подзаголовок", name: "subtitle", widget: "text"}
+          - {label: "Текст кнопки консультации", name: "consultationButtonText", widget: "string"}
+          - {label: "Текст кнопки подробнее", name: "learnMoreButtonText", widget: "string"}
+
+  - name: "about"
+    label: "О нас"
+    files:
+      - name: "about"
+        label: "О нас"
+        file: "content/about.json"
+        fields:
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Подзаголовок", name: "subtitle", widget: "string"}
+          - {label: "Основной текст", name: "mainText", widget: "markdown"}
+          - label: "Статистика"
+            name: "stats"
+            widget: "list"
+            fields:
+              - {label: "Число", name: "number", widget: "string"}
+              - {label: "Текст", name: "label", widget: "string"}
+          - label: "Особенности"
+            name: "highlights"
+            widget: "list"
+            fields:
+              - {label: "Заголовок", name: "title", widget: "string"}
+              - {label: "Текст", name: "text", widget: "text"}
+
+  - name: "services"
+    label: "Услуги"
+    files:
+      - name: "services"
+        label: "Услуги"
+        file: "content/services.json"
+        fields:
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Подзаголовок", name: "subtitle", widget: "text"}
+          - label: "Услуги"
+            name: "services"
+            widget: "list"
+            fields:
+              - {label: "Название", name: "title", widget: "string"}
+              - {label: "Цена", name: "price", widget: "string"}
+              - {label: "Описание", name: "description", widget: "text"}
+              - label: "Особенности"
+                name: "features"
+                widget: "list"
+                field: {label: "Особенность", name: "feature", widget: "string"}
+
+  - name: "testimonials"
+    label: "Отзывы"
+    files:
+      - name: "testimonials"
+        label: "Отзывы"
+        file: "content/testimonials.json"
+        fields:
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Подзаголовок", name: "subtitle", widget: "text"}
+          - label: "Отзывы"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - {label: "Текст", name: "text", widget: "text"}
+              - {label: "Автор", name: "author", widget: "string"}
+              - {label: "Должность", name: "position", widget: "string"}
+              - {label: "Фото", name: "photo", widget: "image", required: false}
+
+  - name: "faq"
+    label: "FAQ"
+    files:
+      - name: "faq"
+        label: "FAQ"
+        file: "content/faq.json"
+        fields:
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Подзаголовок", name: "subtitle", widget: "text"}
+          - label: "Вопросы"
+            name: "questions"
+            widget: "list"
+            fields:
+              - {label: "Вопрос", name: "question", widget: "string"}
+              - {label: "Ответ", name: "answer", widget: "text"} 

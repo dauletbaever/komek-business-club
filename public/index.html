@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0052CC" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#0052CC" />
+    <meta name="msapplication-TileColor" content="#0052CC" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Komek Business Club - Развитие бизнеса в Казахстане</title>
+    <meta name="title" content="Komek Business Club - Развитие бизнеса в Казахстане">
+    <meta name="description" content="Помогаем микробизнесам расти, увеличивать прибыль и избегать типичных ошибок. Профессиональные консультации, комплексные решения для бизнеса в Казахстане.">
+    <meta name="keywords" content="бизнес консультации, развитие бизнеса, Казахстан, Алматы, бизнес обучение, финансовая грамотность, маркетинг, стратегия развития">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://komekclub.kz/">
+    <meta property="og:title" content="Komek Business Club - Развитие бизнеса в Казахстане">
+    <meta property="og:description" content="Помогаем микробизнесам расти, увеличивать прибыль и избегать типичных ошибок. Профессиональные консультации, комплексные решения для бизнеса в Казахстане.">
+    <meta property="og:image" content="https://komekclub.kz/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://komekclub.kz/">
+    <meta property="twitter:title" content="Komek Business Club - Развитие бизнеса в Казахстане">
+    <meta property="twitter:description" content="Помогаем микробизнесам расти, увеличивать прибыль и избегать типичных ошибок. Профессиональные консультации, комплексные решения для бизнеса в Казахстане.">
+    <meta property="twitter:image" content="https://komekclub.kz/twitter-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://komekclub.kz/" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Netlify Identity -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Komek Business Club",
+        "url": "https://komekclub.kz",
+        "logo": "https://komekclub.kz/logo.png",
+        "description": "Помогаем микробизнесам расти, увеличивать прибыль и избегать типичных ошибок",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Достык 123/4",
+          "addressLocality": "Алматы",
+          "addressCountry": "KZ"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-777-123-45-67",
+          "contactType": "customer service",
+          "email": "info@komekclub.kz",
+          "availableLanguage": ["Russian", "Kazakh"]
+        },
+        "sameAs": [
+          "https://instagram.com/komek.business",
+          "https://t.me/komekclub"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>Для работы приложения необходимо включить JavaScript</noscript>
+    <div id="root"></div>
+    <script src="/bundle.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
