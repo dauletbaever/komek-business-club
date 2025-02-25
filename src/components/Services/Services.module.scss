@@ -1,0 +1,124 @@
+@import '../../styles/variables';
+
+.services {
+  padding: 100px 0;
+  background: linear-gradient(135deg, $background 0%, $background-alt 100%);
+
+  .container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+
+    h2 {
+      margin-bottom: 16px;
+      color: $text-primary;
+    }
+
+    p {
+      color: $text-secondary;
+      font-size: 1.2rem;
+    }
+  }
+
+  .packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: start;
+
+    @media (max-width: map-get($breakpoints, tablet)) {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  .package {
+    position: relative;
+    padding: 40px;
+    background: $background;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba($primary, 0.1);
+    transition: all $transition-normal;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba($primary, 0.15);
+    }
+
+    &.popular {
+      border: 2px solid $primary;
+      transform: scale(1.05);
+
+      @media (max-width: map-get($breakpoints, tablet)) {
+        transform: scale(1);
+      }
+
+      &:hover {
+        transform: scale(1.05) translateY(-10px);
+
+        @media (max-width: map-get($breakpoints, tablet)) {
+          transform: translateY(-10px);
+        }
+      }
+    }
+
+    .popular_badge {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: $primary;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    h3 {
+      margin-bottom: 16px;
+      color: $text-primary;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      color: $text-secondary;
+      margin-bottom: 24px;
+      min-height: 48px;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 32px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: $text-primary;
+        margin-bottom: 12px;
+
+        .check_icon {
+          width: 20px;
+          height: 20px;
+          fill: $secondary;
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+} 
